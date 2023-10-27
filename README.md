@@ -2,7 +2,7 @@
 
 This is the companion repository for the paper "Flow Matching for Scalable Simulation Based Inference" https://neurips.cc/virtual/2023/poster/72395
 
-The code is implemented as part of the `dingo-gw` package https://github.com/dingo-gw/dingo. To access the code, please clone this repository and checkout the branch "FMPE". The scripts used to produce the results from the paper are located in this repository.
+The code is implemented as part of the `dingo-gw` package https://github.com/dingo-gw/dingo. To access the code, please clone this repository and checkout the branch [FMPE](https://github.com/dingo-gw/dingo/tree/FMPE). The scripts used to produce the results from the paper are located in this repository.
 
 ## Commands
 
