@@ -13,8 +13,8 @@ experiment.
 ![alt text](figures/fmpe.png)
 
 # Set up
-First, clone the [FMPE](https://github.com/dingo-gw/dingo/tree/FMPE) of the `dingo` 
-repository.
+First, clone the [FMPE](https://github.com/dingo-gw/dingo/tree/FMPE) branch of the 
+`dingo` repository.
 
 ```sh
 git clone --branch FMPE https://github.com/dingo-gw/dingo.git
@@ -89,7 +89,7 @@ spectral density (ASD). For simplicity, we provide a dataset in
 
 ### 3. Train the Dingo network
 
-Once the datasets are available, we train the FMPE branch network.
+Once the datasets are available, we train the FMPE network.
 
 ```sh
 dingo_train --settings_file training/train_settings.yaml --train_dir training
