@@ -155,25 +155,24 @@ def evaluate_model(train_dir, settings, dataset, model, use_wandb=False):
         c2st_score = c2st(posterior_samples[:n], reference_samples[:n])
 
         c2st_scores[f"C2ST {obs}"] = c2st_score.item()
-        if obs == 1:
-            fig = plt.figure(figsize=(10, 10))
-            plt.scatter(
-                posterior_samples[:, 0],
-                posterior_samples[:, 1],
-                s=0.5,
-                alpha=0.2,
-                label="flow matching",
-            )
-            plt.scatter(
-                reference_samples[:, 0],
-                reference_samples[:, 1],
-                s=0.5,
-                alpha=0.2,
-                label="reference",
-            )
-            plt.title(f"C2ST: {c2st_score.item():.3f}")
-            plt.legend()
-            plt.savefig(join(train_dir, "posteriors.png"))
+        fig = plt.figure(figsize=(10, 10))
+        plt.scatter(
+            posterior_samples[:, 0],
+            posterior_samples[:, 1],
+            s=0.5,
+            alpha=0.2,
+            label="flow matching",
+        )
+        plt.scatter(
+            reference_samples[:, 0],
+            reference_samples[:, 1],
+            s=0.5,
+            alpha=0.2,
+            label="reference",
+        )
+        plt.title(f"C2ST: {c2st_score.item():.3f}")
+        plt.legend()
+        plt.savefig(join(train_dir, f"posterior_{obs}.png"))
 
     with open(
         join(train_dir, "c2st.csv"), "w"
