@@ -89,7 +89,7 @@ spectral density (ASD). For simplicity, we provide a dataset in
 
 ### 3. Train the Dingo network
 
-Once the datasets are available, we train the FMPE network.
+Once the datasets are available, we train the FMPE branch network.
 
 ```sh
 dingo_train --settings_file training/train_settings.yaml --train_dir training
